@@ -23,7 +23,9 @@
   --neutral-dark: #333333;
 
   /* Layout */
+  --width-full: 100%;
   --container-width: 1200px;
+  --L-container-width: 1940px;
   --section-padding: 5rem 1rem;
   --border-radius-sm: 8px;
   --border-radius-md: 16px;
@@ -34,11 +36,10 @@
   --font-body: "Karla", sans-serif;
 
   --font-size-body: 1rem; /* 16px */
+  --font-size-heading: 4rem; /* 32px */
   --font-size-subtitle: 3.333rem; /* 53.33px */
-  --font-size-lead-text: 1.5rem; /* 24px */
   --font-size-card-title: 1.5rem; /* 24px */
   --font-size-paragraph: 1.333rem; /* 21.33px */
-  --font-size-highlight: 1.333rem; /* 21.33px */
 
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -50,56 +51,23 @@
   --transition-med: 0.3s ease;
 
   /* Line Heights */
+  --line-height-heading: 1.2;
   --line-height-paragraph: 1.6;
 
   /* Font Weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
+
+  /* Spacing */
+    --spacing-xs: 0.25rem; /* 4px */
+    --spacing-sm: 0.5rem; /* 8px */
+    --spacing-md: 1rem; /* 16px */
+    --spacing-lg: 1.5rem; /* 32px */
+    --spacing-xl: 2rem; /* 64px */
 }
 
-body {
-  font-family: var(--font-body);
-  line-height: var(--line-height-paragraph);
-  color: var(--neutral-dark);
-  background-color: var(--neutral-white);
-  font-size: var(--font-size-body);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-  font-weight: 500;
-  line-height: 1.2;
-}
 
-h1 {
-  font-size: 4rem;
-  font-weight: 500;
-}
 
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
 
-h3 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-}
-
-h4 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}

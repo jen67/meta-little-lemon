@@ -1,52 +1,6 @@
 @import "./variables.css";
 
 .App {
- 
-}
-
-/* Container */
-.container {
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-/* Button styles */
-.btn {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 0.75rem 1.75rem;
-  border: none;
-  border-radius: var(--border-radius-sm);
-  cursor: pointer;
-  transition: all var(--transition-med);
-  text-decoration: none;
-}
-
-.btn-primary {
-  background-color: var(--primary-yellow);
-  color: var(--neutral-dark);
-  box-shadow: var(--shadow-sm);
-}
-
-.btn-primary:hover {
-  background-color: #e0bc13;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.btn-secondary {
-  background-color: var(--primary-green);
-  color: var(--neutral-white);
-}
-
-.btn-secondary:hover {
-  background-color: #3a4b45;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 /* Header & Navigation */
@@ -257,10 +211,9 @@
   gap: 0.5rem;
 }
 
-.order-icon{
+.order-icon {
   width: 24px;
   height: 24px;
- 
 }
 
 .order-btn:hover {

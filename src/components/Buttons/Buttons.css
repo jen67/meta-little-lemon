@@ -1,0 +1,37 @@
+/* Path: src/components/Buttons/PrimaryBtn/Buttons.css */
+
+.btn{
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-body);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-med);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-yellow);
+  color: var(--neutral-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: #e0bc13;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: var(--primary-green);
+  color: var(--neutral-white);
+}
+
+.btn-secondary:hover {
+  background-color: #3a4b45;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}

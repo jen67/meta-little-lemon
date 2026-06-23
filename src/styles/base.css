@@ -1,0 +1,61 @@
+/* base.css */
+@import "./variables.css";
+
+body {
+  font-family: var(--font-body);
+  line-height: var(--line-height-paragraph);
+  color: var(--neutral-dark);
+  background-color: var(--neutral-white);
+  font-size: var(--font-size-body);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-heading);
+}
+
+h1 {
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-medium);
+}
+
+h2 {
+  font-size: var(--font-size-subtitle);
+}
+
+h3 {
+  font-size: var(--font-size-card-title);
+}
+
+h4 {
+  font-size: var(--font-size-paragraph);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: var(--width-full);
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+
+  @media (min-width: 1200px) {
+    max-width: var(--L-container-width);
+  }
+}
+

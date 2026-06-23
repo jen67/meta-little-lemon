@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import '../styles/BookingForm.css'; 
+import React, { useState, useEffect } from "react";
+import "../styles/BookingForm.css";
 
 function BookingForm({ availableTimes, updateTimes }) {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    date: '',
-    time: '',
+    name: "",
+    email: "",
+    date: "",
+    time: "",
     guests: 1,
-    occasion: 'Birthday'
+    occasion: "Birthday",
   });
-  
+
   const [errors, setErrors] = useState({});
 
   // Update available times when date changes
@@ -22,9 +22,9 @@ function BookingForm({ availableTimes, updateTimes }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -41,23 +41,23 @@ function BookingForm({ availableTimes, updateTimes }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formErrors = validateForm();
-    
+
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
       return;
     }
-    
+
     alert("Booking successful!");
     console.log("Form submitted:", formData);
-    
+
     // Reset form after submission
     setFormData({
-      name: '',
-      email: '',
-      date: '',
-      time: '',
+      name: "",
+      email: "",
+      date: "",
+      time: "",
       guests: 1,
-      occasion: 'Birthday'
+      occasion: "Birthday",
     });
     setErrors({});
   };
@@ -79,9 +79,13 @@ function BookingForm({ availableTimes, updateTimes }) {
               aria-required="true"
               aria-invalid={errors.name ? "true" : "false"}
             />
-            {errors.name && <p className="form-error" role="alert">{errors.name}</p>}
+            {errors.name && (
+              <p className="form-error" role="alert">
+                {errors.name}
+              </p>
+            )}
           </div>
-          
+
           <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
@@ -94,9 +98,13 @@ function BookingForm({ availableTimes, updateTimes }) {
               aria-required="true"
               aria-invalid={errors.email ? "true" : "false"}
             />
-            {errors.email && <p className="form-error" role="alert">{errors.email}</p>}
+            {errors.email && (
+              <p className="form-error" role="alert">
+                {errors.email}
+              </p>
+            )}
           </div>
-          
+
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="date">Date</label>
@@ -110,9 +118,13 @@ function BookingForm({ availableTimes, updateTimes }) {
                 aria-required="true"
                 aria-invalid={errors.date ? "true" : "false"}
               />
-              {errors.date && <p className="form-error" role="alert">{errors.date}</p>}
+              {errors.date && (
+                <p className="form-error" role="alert">
+                  {errors.date}
+                </p>
+              )}
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="time">Time</label>
               <select
@@ -125,14 +137,20 @@ function BookingForm({ availableTimes, updateTimes }) {
                 aria-invalid={errors.time ? "true" : "false"}
               >
                 <option value="">Select a time</option>
-                {availableTimes.map(time => (
-                  <option key={time} value={time}>{time}</option>
+                {availableTimes.map((time) => (
+                  <option key={time} value={time}>
+                    {time}
+                  </option>
                 ))}
               </select>
-              {errors.time && <p className="form-error" role="alert">{errors.time}</p>}
+              {errors.time && (
+                <p className="form-error" role="alert">
+                  {errors.time}
+                </p>
+              )}
             </div>
           </div>
-          
+
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="guests">Number of Guests</label>
@@ -147,9 +165,13 @@ function BookingForm({ availableTimes, updateTimes }) {
                 className="form-control"
                 aria-invalid={errors.guests ? "true" : "false"}
               />
-              {errors.guests && <p className="form-error" role="alert">{errors.guests}</p>}
+              {errors.guests && (
+                <p className="form-error" role="alert">
+                  {errors.guests}
+                </p>
+              )}
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="occasion">Occasion</label>
               <select
@@ -166,8 +188,10 @@ function BookingForm({ availableTimes, updateTimes }) {
               </select>
             </div>
           </div>
-          
-          <button type="submit" className="btn btn-primary">Confirm Reservation</button>
+
+          <button type="submit" className="btn btn-primary">
+            Confirm Reservation
+          </button>
         </form>
       </div>
     </section>

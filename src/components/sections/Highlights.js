@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import GreekSaladImage from "../../Assets/icons_assets/greek salad.jpg";
 import BruschettaImage from "../../Assets/icons_assets/bruchetta.svg";
 import LemonDessertImage from "../../Assets/icons_assets/lemon dessert.jpg";
-import cardIcon from  "../../Assets/icons_assets/creditcard.svg"
-
+import cardIcon from "../../Assets/icons_assets/creditcard.svg";
 
 function Highlights() {
   // Sample data - in a real app, this would come from an API or props
@@ -22,14 +21,16 @@ function Highlights() {
       name: "Bruschetta",
       price: "$9.99",
       image: BruschettaImage,
-      description: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
+      description:
+        "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
     },
     {
       id: 3,
       name: "Lemon Dessert",
       price: "$7.99",
       image: LemonDessertImage,
-      description: "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
+      description:
+        "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
     },
   ];
 
