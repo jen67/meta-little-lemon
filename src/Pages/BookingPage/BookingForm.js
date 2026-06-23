@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import "../styles/BookingForm.css";
+import React, { useState } from "react";
+import "./BookingForm.css";
 
-function BookingForm({ availableTimes, updateTimes }) {
+function BookingForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,12 +13,7 @@ function BookingForm({ availableTimes, updateTimes }) {
 
   const [errors, setErrors] = useState({});
 
-  // Update available times when date changes
-  useEffect(() => {
-    if (formData.date) {
-      updateTimes(formData.date);
-    }
-  }, [formData.date, updateTimes]);
+ 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -137,11 +132,7 @@ function BookingForm({ availableTimes, updateTimes }) {
                 aria-invalid={errors.time ? "true" : "false"}
               >
                 <option value="">Select a time</option>
-                {availableTimes.map((time) => (
-                  <option key={time} value={time}>
-                    {time}
-                  </option>
-                ))}
+                
               </select>
               {errors.time && (
                 <p className="form-error" role="alert">

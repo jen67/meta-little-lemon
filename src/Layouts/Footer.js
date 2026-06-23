@@ -2,14 +2,16 @@
 import React from 'react';
 import  logo from  "../Assets/icons_assets/Logo.svg"
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
+          
           <div className="footer-logo" aria-label="Little Lemon Logo">
             <img src={logo} alt="Little Lemon Logo" className="footer-logo-img" />
           </div>
+
           <div className="doormat-navigation">
             <h3>Navigation</h3>
             <nav aria-label="Footer navigation">
@@ -23,6 +25,7 @@ function Footer() {
               </ul>
             </nav>
           </div>
+
           <div className="contact">
             <h3>Contact</h3>
             <address>
@@ -32,6 +35,7 @@ function Footer() {
               <p>Email: <a href="mailto:info@littlelemon.com">info@littlelemon.com</a></p>
             </address>
           </div>
+
           <div className="social-links">
             <h3>Social Media</h3>
             <ul>
@@ -40,7 +44,10 @@ function Footer() {
               <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
             </ul>
           </div>
+
         </div>
+
+
         <div className="copyright">
           <p>© {new Date().getFullYear()} Little Lemon Restaurant</p>
         </div>

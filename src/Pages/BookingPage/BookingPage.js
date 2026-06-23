@@ -1,5 +1,5 @@
 import React from 'react';
-import BookingForm from '../../components/BookingForm';
+import BookingForm from './BookingForm';
 
 function BookingPage({ availableTimes, updateTimes }) {
   return (
@@ -9,11 +9,7 @@ function BookingPage({ availableTimes, updateTimes }) {
           <h1>Reserve Your Table</h1>
           <p>Please fill out the form below to book your reservation at Little Lemon.</p>
         </div>
-        
-        <BookingForm 
-          availableTimes={availableTimes}
-          updateTimes={updateTimes}
-        />
+        <BookingForm />
         
         <div className="booking-info">
           <h2>Reservation Information</h2>
