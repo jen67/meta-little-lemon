@@ -1,8 +1,10 @@
 import React from 'react';
-import Hero from '../../components/sections/Hero';
-import Highlights from '../../components/sections/Highlights';
-import Testimonials from '../../components/sections/Testimonials';
-import About from '../../components/sections/About';
+import Hero from './HeroSection/Hero';
+import Highlights from './HighlightSection/Highlights';
+import Testimonials from './TestimonialSection/Testimonials';
+import About from './AboutSection/About';
+
+import "./HomePage.css";
 
 function HomePage() {
   return (

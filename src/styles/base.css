@@ -7,10 +7,18 @@ body {
   color: var(--neutral-dark);
   background-color: var(--neutral-white);
   font-size: var(--font-size-body);
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 h1,

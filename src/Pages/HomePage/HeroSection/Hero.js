@@ -1,7 +1,7 @@
-// filepath: c:\Users\Dell\Desktop\little-lemon\src\components\sections\Hero.js
 import React from "react";
-import { Link } from "react-router-dom";
-import HeroImage from "../../Assets/icons_assets/restauranfood.jpg"; // Assuming you have an image file in this path
+import { HeroImage } from "../../../Assets/icons_assets";
+import Button from '../../../components/Buttons/Buttons';
+import "./Hero.css";
 
 function Hero() {
   return (
@@ -14,13 +14,14 @@ function Hero() {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <Link
-            to="/reservations"
-            className="btn btn-primary"
+          <Button
+            variant="primary"
+            to="/booking"
+            className="btn-primary"
             aria-label="Reserve a table"
           >
             Reserve a Table
-          </Link>
+          </Button>
         </div>
         <div
           className="hero-image"

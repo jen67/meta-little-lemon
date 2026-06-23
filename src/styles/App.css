@@ -1,7 +1,6 @@
 @import "./variables.css";
 
-.App {
-}
+
 
 /* Header & Navigation */
 .header {
@@ -363,13 +362,7 @@
   object-fit: cover;
 }
 
-/* Footer */
-.footer {
-  background-color: var(--neutral-dark);
-  color: var(--neutral-light);
-  padding: 5rem 0 2rem;
-  margin-top: auto;
-}
+
 
 .footer-content {
   display: grid;
@@ -404,10 +397,10 @@
 }
 
 .footer a {
-  color: var(--neutral-light);
+  color: var(--neutral-white);
   text-decoration: none;
   transition: color var(--transition-fast);
-  opacity: 0.8;
+
 }
 
 .footer a:hover {

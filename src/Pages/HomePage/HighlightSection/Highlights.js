@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import GreekSaladImage from "../../Assets/icons_assets/greek salad.jpg";
-import BruschettaImage from "../../Assets/icons_assets/bruchetta.svg";
-import LemonDessertImage from "../../Assets/icons_assets/lemon dessert.jpg";
-import cardIcon from "../../Assets/icons_assets/creditcard.svg";
+import GreekSaladImage from "../../../Assets/icons_assets/greek salad.jpg";
+import BruschettaImage from "../../../Assets/icons_assets/bruchetta.svg";
+import LemonDessertImage from "../../../Assets/icons_assets/lemon dessert.jpg";
+import cardIcon from "../../../Assets/icons_assets/creditcard.svg";
+import "./Highlights.css";
 
 function Highlights() {
   // Sample data - in a real app, this would come from an API or props

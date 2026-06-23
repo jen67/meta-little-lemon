@@ -1,6 +1,6 @@
-// filepath: c:\Users\Dell\Desktop\little-lemon\src\components\Footer.js
 import React from 'react';
-import  logo from  "../Assets/icons_assets/Logo.svg"
+import { Logo } from "../../Assets/icons_assets";
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-content">
           
           <div className="footer-logo" aria-label="Little Lemon Logo">
-            <img src={logo} alt="Little Lemon Logo" className="footer-logo-img" />
+            <img src={Logo} alt="Little Lemon Logo" className="footer-logo-img" />
           </div>
 
           <div className="doormat-navigation">
