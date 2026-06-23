@@ -1,5 +1,5 @@
 /* Global styles */
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&family=Markazi+Text:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&family=Markazi+Text:wght@400;500;700&display=swap");
 
 * {
   margin: 0;
@@ -9,48 +9,68 @@
 
 :root {
   /* Primary colors - refined palette */
-  --primary-green: #495E57;
-  --primary-yellow: #F4CE14;
-  
+  --primary-green: #495e57;
+  --primary-yellow: #f4ce14;
+
   /* Secondary colors - adjusted for better contrast */
-  --secondary-salmon: #EE9972;
-  --secondary-peach: #FBDABB;
-  
+  --secondary-salmon: #ee9972;
+  --secondary-peach: #fbdabb;
+
   /* Neutral colors - expanded range */
-  --neutral-white: #FFFFFF;
-  --neutral-light: #EDEFEE;
-  --neutral-gray: #8C8C8C;
+  --neutral-white: #ffffff;
+  --neutral-light: #edefee;
+  --neutral-gray: #8c8c8c;
   --neutral-dark: #333333;
-  
+
   /* Layout */
   --container-width: 1200px;
   --section-padding: 5rem 1rem;
   --border-radius-sm: 8px;
   --border-radius-md: 16px;
-  
+  --border-radius-lg: 24px;
+
   /* Typography */
-  --font-heading: 'Markazi Text', serif;
-  --font-body: 'Karla', sans-serif;
-  
+  --font-heading: "Markazi Text", serif;
+  --font-body: "Karla", sans-serif;
+
+  --font-size-subtitle: 3.333rem; /* 53.33px */
+  --font-size-lead-text: 1.5rem; /* 24px */
+  --font-size-card-title: 1.5rem; /* 24px */
+  --font-size-paragraph: 1.333rem; /* 21.33px */
+  --font-size-highlight: 1.333rem; /* 21.33px */
+
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-med: 0.3s ease;
+
+  /* Line Heights */
+  --line-height-paragraph: 1.6;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 }
 
 body {
   font-family: var(--font-body);
-  line-height: 1.6;
+  line-height: var(--line-height-paragraph);
   color: var(--neutral-dark);
   background-color: var(--neutral-white);
   font-size: 16px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 500;
   line-height: 1.2;
@@ -148,10 +168,6 @@ p {
   flex-wrap: wrap;
 }
 
-.logo-container {
-  padding: 0.75rem 0;
-}
-
 .logo {
   width: 180px;
   height: 60px;
@@ -179,7 +195,7 @@ p {
 }
 
 .nav-menu a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -317,9 +333,9 @@ p {
 }
 
 .price {
-  color: var(--primary-green);
+  color: var(--secondary-salmon);
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .description {
@@ -338,6 +354,15 @@ p {
   border: none;
   color: var(--primary-green);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.order-icon{
+  width: 24px;
+  height: 24px;
+ 
 }
 
 .order-btn:hover {
@@ -456,7 +481,8 @@ p {
   height: 500px;
 }
 
-.about-img-1, .about-img-2 {
+.about-img-1,
+.about-img-2 {
   position: absolute;
   border-radius: var(--border-radius-md);
   overflow: hidden;
@@ -479,7 +505,8 @@ p {
   z-index: 1;
 }
 
-.about-img-1 img, .about-img-2 img {
+.about-img-1 img,
+.about-img-2 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -572,15 +599,15 @@ p {
   h1 {
     font-size: 3.5rem;
   }
-  
+
   h2 {
     font-size: 2.25rem;
   }
-  
+
   .about .container {
     gap: 3rem;
   }
-  
+
   .footer-content {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -590,55 +617,55 @@ p {
   :root {
     --section-padding: 4rem 1rem;
   }
-  
+
   h1 {
     font-size: 3rem;
   }
-  
+
   .header .container {
     flex-direction: column;
   }
-  
+
   .nav-menu {
     width: 100%;
     margin-top: 1rem;
   }
-  
+
   .nav-menu ul {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem 2rem;
   }
-  
+
   .hero .container,
   .about .container {
     grid-template-columns: 1fr;
   }
-  
+
   .hero-content {
     max-width: 100%;
   }
-  
+
   .hero-image {
     height: 350px;
     order: -1;
   }
-  
+
   .section-header {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .about-images {
     height: 400px;
     margin-top: 2rem;
   }
-  
+
   .about-img-1 {
     width: 80%;
   }
-  
+
   .about-img-2 {
     width: 70%;
   }
@@ -648,27 +675,27 @@ p {
   h1 {
     font-size: 2.5rem;
   }
-  
+
   h2 {
     font-size: 2rem;
   }
-  
+
   .container {
     padding: 0 1.5rem;
   }
-  
+
   .nav-menu ul {
     gap: 1rem;
   }
-  
+
   .specials-cards {
     grid-template-columns: 1fr;
   }
-  
+
   .about-images {
     height: 350px;
   }
-  
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -676,7 +703,8 @@ p {
 }
 
 /* Accessibility Focus States */
-a:focus, button:focus {
+a:focus,
+button:focus {
   outline: 2px solid var(--primary-yellow);
   outline-offset: 2px;
 }

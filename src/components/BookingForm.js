@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import '../styles/BookingForm.css'; 
 
-function BookingForm() {
+function BookingForm({ availableTimes, updateTimes }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,6 +12,13 @@ function BookingForm() {
   });
   
   const [errors, setErrors] = useState({});
+
+  // Update available times when date changes
+  useEffect(() => {
+    if (formData.date) {
+      updateTimes(formData.date);
+    }
+  }, [formData.date, updateTimes]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,6 +34,7 @@ function BookingForm() {
     if (!formData.email) tempErrors.email = "Email is required";
     if (!formData.date) tempErrors.date = "Date is required";
     if (!formData.time) tempErrors.time = "Time is required";
+    if (formData.guests < 1) tempErrors.guests = "At least 1 guest is required";
     return tempErrors;
   };
 
@@ -40,6 +49,17 @@ function BookingForm() {
     
     alert("Booking successful!");
     console.log("Form submitted:", formData);
+    
+    // Reset form after submission
+    setFormData({
+      name: '',
+      email: '',
+      date: '',
+      time: '',
+      guests: 1,
+      occasion: 'Birthday'
+    });
+    setErrors({});
   };
 
   return (
@@ -57,8 +77,9 @@ function BookingForm() {
               onChange={handleChange}
               className="form-control"
               aria-required="true"
+              aria-invalid={errors.name ? "true" : "false"}
             />
-            {errors.name && <p className="form-error">{errors.name}</p>}
+            {errors.name && <p className="form-error" role="alert">{errors.name}</p>}
           </div>
           
           <div className="form-group">
@@ -71,8 +92,9 @@ function BookingForm() {
               onChange={handleChange}
               className="form-control"
               aria-required="true"
+              aria-invalid={errors.email ? "true" : "false"}
             />
-            {errors.email && <p className="form-error">{errors.email}</p>}
+            {errors.email && <p className="form-error" role="alert">{errors.email}</p>}
           </div>
           
           <div className="form-row">
@@ -86,22 +108,28 @@ function BookingForm() {
                 onChange={handleChange}
                 className="form-control"
                 aria-required="true"
+                aria-invalid={errors.date ? "true" : "false"}
               />
-              {errors.date && <p className="form-error">{errors.date}</p>}
+              {errors.date && <p className="form-error" role="alert">{errors.date}</p>}
             </div>
             
             <div className="form-group">
               <label htmlFor="time">Time</label>
-              <input
-                type="time"
+              <select
                 id="time"
                 name="time"
                 value={formData.time}
                 onChange={handleChange}
                 className="form-control"
                 aria-required="true"
-              />
-              {errors.time && <p className="form-error">{errors.time}</p>}
+                aria-invalid={errors.time ? "true" : "false"}
+              >
+                <option value="">Select a time</option>
+                {availableTimes.map(time => (
+                  <option key={time} value={time}>{time}</option>
+                ))}
+              </select>
+              {errors.time && <p className="form-error" role="alert">{errors.time}</p>}
             </div>
           </div>
           
@@ -117,7 +145,9 @@ function BookingForm() {
                 value={formData.guests}
                 onChange={handleChange}
                 className="form-control"
+                aria-invalid={errors.guests ? "true" : "false"}
               />
+              {errors.guests && <p className="form-error" role="alert">{errors.guests}</p>}
             </div>
             
             <div className="form-group">

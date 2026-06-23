@@ -1,5 +1,6 @@
 // filepath: c:\Users\Dell\Desktop\little-lemon\src\components\Footer.js
 import React from 'react';
+import  logo from  "../Assets/icons_assets/Logo.svg"
 
 function Footer() {
   return (
@@ -7,7 +8,7 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-logo" aria-label="Little Lemon Logo">
-            {/* Logo placeholder */}
+            <img src={logo} alt="Little Lemon Logo" className="footer-logo-img" />
           </div>
           <div className="doormat-navigation">
             <h3>Navigation</h3>
