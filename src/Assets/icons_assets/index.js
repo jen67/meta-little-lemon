@@ -7,6 +7,8 @@ import Logo from "./Logo.svg";
 import TwitterIcon from "./TwitterIcon.svg";
 import FacebookIcon from "./FacebookIcon.svg";
 import InstagramIcon from "./InstagramIcon.svg";
+import HamburgerOpen from "./icon_hamburger.svg";
+import HamburgerClose from "./HamburgerClose.svg";
 
 export {
   HeroImage,
@@ -18,4 +20,6 @@ export {
   TwitterIcon,
   FacebookIcon,
   InstagramIcon,
+  HamburgerOpen,
+  HamburgerClose,
 };

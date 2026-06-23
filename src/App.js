@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Header from './Layouts/Header';
+import Header from './Layouts/Header/Header';
 import Main from './Layouts/Main';
 import Footer from './Layouts/Footer/Footer';
 
