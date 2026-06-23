@@ -1,11 +1,11 @@
 import React from "react";
 import { HeroImage } from "../../../Assets/icons_assets";
-import Button from '../../../components/Buttons/Buttons';
+import Button from "../../../components/Buttons/Buttons";
 import "./Hero.css";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="container">
         <div className="hero-content">
           <h1>Little Lemon</h1>

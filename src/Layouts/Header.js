@@ -8,13 +8,13 @@ function Header() {
     <header className="header">
       <div className="container">
         <div className="logo-container">
-          <Link to="/">
+          <Link to="/" state={{ scrollToHero: true }}>
             <img src={logo} alt="Little Lemon Logo" className="logo" />
           </Link>
         </div>
         <nav className="nav-menu" aria-label="Primary navigation">
           <ul>
-            <li><Link to="/">Home</Link></li>
+            <li><Link to="/" state={{ scrollToHero: true }}>Home</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/menu">Menu</Link></li>
             <li><Link to="/booking">Reservations</Link></li>

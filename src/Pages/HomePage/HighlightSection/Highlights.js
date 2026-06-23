@@ -36,7 +36,7 @@ function Highlights() {
   ];
 
   return (
-    <section className="highlights">
+    <section className="highlights" id="highlights">
       <div className="container">
         <div className="section-header">
           <h2>This week's specials!</h2>

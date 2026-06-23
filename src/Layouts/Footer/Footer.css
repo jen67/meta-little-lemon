@@ -4,3 +4,76 @@
   padding: var(--spacing-xxxxl) 0 var(--spacing-xl);
   margin-top: auto;
 }
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xxl);
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer h3 {
+  color: var(--primary-yellow);
+  font-size: var(--font-size-card-title);
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer-logo {
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer li,
+.contact {
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+}
+
+.footer a {
+  color: var(--neutral-white);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer a:hover {
+  color: var(--secondary-salmon);
+}
+
+.social-links ul {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.social-links li {
+  margin-bottom: 0;
+}
+
+.social-icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  transition: all var(--transition-med);
+}
+
+.social-icon img {
+  object-fit: contain;
+  display: block;
+}
+
+.social-icon .facebook-icon,
+.instagram-icon {
+  width: 22px;
+  height: 22px;
+}

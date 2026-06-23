@@ -34,7 +34,8 @@
   /* Typography */
   --font-heading: "Markazi Text", serif;
   --font-body: "Karla", sans-serif;
-
+  
+  --font-size-sm: 0.975rem; /* 15.6px */
   --font-size-body: 1rem; /* 16px */
   --font-size-heading: 4rem; /* 32px */
   --font-size-subtitle: 3.333rem; /* 53.33px */

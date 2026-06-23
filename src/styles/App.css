@@ -364,65 +364,21 @@
 
 
 
-.footer-content {
-  display: grid;
-  grid-template-columns: 1.5fr repeat(3, 1fr);
-  gap: 3rem;
-  margin-bottom: 3rem;
-}
 
-.footer h3 {
-  color: var(--primary-yellow);
-  margin-bottom: 1.5rem;
-  font-size: 1.25rem;
-}
 
-.footer-logo-section p {
-  margin-top: 1rem;
-  opacity: 0.8;
-  max-width: 300px;
-}
 
-.footer-logo {
-  width: 160px;
-  margin-bottom: 1rem;
-}
 
-.footer ul {
-  list-style: none;
-}
 
-.footer li {
-  margin-bottom: 0.75rem;
-}
 
-.footer a {
-  color: var(--neutral-white);
-  text-decoration: none;
-  transition: color var(--transition-fast);
 
-}
 
-.footer a:hover {
-  color: var(--primary-yellow);
-  opacity: 1;
-}
 
-.social-links ul {
-  display: flex;
-  gap: 1rem;
-}
 
-.social-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transition: all var(--transition-med);
-}
+
+
+
+
+
 
 .social-icon:hover {
   background-color: var(--primary-yellow);
@@ -452,9 +408,7 @@
     gap: 3rem;
   }
 
-  .footer-content {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  
 }
 
 @media (max-width: 768px) {
@@ -540,10 +494,7 @@
     height: 350px;
   }
 
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
+  
 }
 
 /* Accessibility Focus States */

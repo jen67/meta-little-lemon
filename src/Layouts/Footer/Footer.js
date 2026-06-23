@@ -1,5 +1,6 @@
-import React from 'react';
-import { Logo } from "../../Assets/icons_assets";
+import React from "react";
+import { Link } from "react-router-dom";
+import { FacebookIcon, InstagramIcon, Logo, TwitterIcon } from "../../Assets/icons_assets";
 import "./Footer.css";
 
 const Footer = () => {
@@ -7,21 +8,38 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          
-          <div className="footer-logo" aria-label="Little Lemon Logo">
-            <img src={Logo} alt="Little Lemon Logo" className="footer-logo-img" />
+          <div className="footer-logo">
+            <Link to="/" state={{ scrollToHero: true }} aria-label="Little Lemon home page">
+              <img
+                src={Logo}
+                alt="Little Lemon Logo"
+                className="footer-logo-img"
+              />
+            </Link>
           </div>
 
           <div className="doormat-navigation">
             <h3>Navigation</h3>
             <nav aria-label="Footer navigation">
               <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/reservations">Reservations</a></li>
-                <li><a href="/order-online">Order Online</a></li>
-                <li><a href="/login">Login</a></li>
+                <li>
+                  <Link to="/" state={{ scrollToHero: true }}>Home</Link>
+                </li>
+                <li>
+                  <Link to="/about">About</Link>
+                </li>
+                <li>
+                  <Link to="/menu">Menu</Link>
+                </li>
+                <li>
+                  <Link to="/booking">Reservations</Link>
+                </li>
+                <li>
+                  <Link to="/order-online">Order Online</Link>
+                </li>
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -31,22 +49,37 @@ const Footer = () => {
             <address>
               <p>123 Main Street</p>
               <p>Chicago, IL</p>
-              <p>Phone: <a href="tel:+11234567890">(123) 456-7890</a></p>
-              <p>Email: <a href="mailto:info@littlelemon.com">info@littlelemon.com</a></p>
+              <p>
+                Phone: <a href="tel:+11234567890">(123) 456-7890</a>
+              </p>
+              <p>
+                Email:{" "}
+                <a href="mailto:info@littlelemon.com">info@littlelemon.com</a>
+              </p>
             </address>
           </div>
 
           <div className="social-links">
             <h3>Social Media</h3>
             <ul>
-              <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-              <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-              <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+              <li>
+                <span className="social-icon" aria-label="Facebook">
+                  <img src={FacebookIcon} alt="Facebook" className="facebook-icon" />
+                </span>
+              </li>
+              <li>
+                <span className="social-icon" aria-label="Instagram">
+                  <img src={InstagramIcon} alt="Instagram" className="instagram-icon" />
+                </span>
+              </li>
+              <li>
+                <span className="social-icon" aria-label="Twitter">
+                  <img src={TwitterIcon} alt="Twitter" className="twitter-icon" />
+                </span>
+              </li>
             </ul>
           </div>
-
         </div>
-
 
         <div className="copyright">
           <p>© {new Date().getFullYear()} Little Lemon Restaurant</p>
@@ -54,6 +87,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
