@@ -1,16 +1,25 @@
 /* Path: src/components/Buttons/PrimaryBtn/Buttons.css */
 
 .btn{
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-body);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-body);
   padding: var(--spacing-msm) var(--spacing-xl);
-  border: none;
+  border:1px solid transparent;
   border-radius: var(--border-radius-sm);
   cursor: pointer;
   transition: all var(--transition-med);
   text-decoration: none;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    max-width: 200px;
+  }
 }
 
 .btn-primary {
@@ -20,9 +29,11 @@
 }
 
 .btn-primary:hover {
-  background-color: #e0bc13;
+  background-color: var(--primary-green);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+  border: 1px solid var(--primary-yellow);
+  color: var(--primary-yellow);
 }
 
 .btn-secondary {

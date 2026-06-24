@@ -1,18 +1,19 @@
 import React from "react";
-import { HeroImage } from "../../../Assets/icons_assets";
-import Button from "../../../components/Buttons/Buttons";
+import { PorkRice } from "../../../Assets/Food-images";
+import Button from '../../../components/Buttons/Buttons';
 import "./Hero.css";
 
-function Hero() {
+const Hero = () => {
   return (
     <section className="hero" id="hero">
       <div className="container">
         <div className="hero-content">
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
+
+          {/* <h3>Traditional Mediterranean Recipes with a Modern Twist</h3> */}
           <p>
-            We are a family owned Mediterranean restaurant, focused on
-            traditional recipes served with a modern twist.
+            We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
           </p>
           <Button
             variant="primary"
@@ -28,7 +29,7 @@ function Hero() {
           aria-label="Food at Little Lemon restaurant"
         >
           <img
-            src={HeroImage}
+            src={PorkRice}
             alt="Delicious food at Little Lemon"
             className="hero-img"
           />

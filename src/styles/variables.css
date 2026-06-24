@@ -25,7 +25,7 @@
   /* Layout */
   --width-full: 100%;
   --container-width: 1200px;
-  --L-container-width: 1940px;
+  --L-container-width: 80%;
   --section-padding: 5rem 1rem;
   --border-radius-sm: 8px;
   --border-radius-md: 16px;
@@ -37,7 +37,11 @@
   
   --font-size-sm: 0.975rem; /* 15.6px */
   --font-size-body: 1rem; /* 16px */
-  --font-size-heading: 4rem; /* 32px */
+  --font-size-md: 1.125rem; /* 18px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-xl: 1.8rem; /* 28.8px */
+  --font-size-heading: 4rem; /* 64px */
+  --font-size-heading-lg: 7rem; /* 112px */
   --font-size-subtitle: 3.333rem; /* 53.33px */
   --font-size-card-title: 1.5rem; /* 24px */
   --font-size-paragraph: 1.333rem; /* 21.33px */

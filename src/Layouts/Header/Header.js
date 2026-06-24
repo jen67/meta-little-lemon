@@ -11,6 +11,7 @@ import "./Header.css";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header className="header">
@@ -28,24 +29,38 @@ const Header = () => {
           >
             <ul>
               <li>
-                <Link to="/" state={{ scrollToHero: true }}>
+                <Link to="/" onClick={closeMenu} state={{ scrollToHero: true }}>
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/about" onClick={closeMenu}>
+                  About
+                </Link>
               </li>
               <li>
-                <Link to="/menu">Menu</Link>
+                <Link to="/menu" onClick={closeMenu}>
+                  Menu
+                </Link>
               </li>
               <li>
-                <Link to="/booking">Reservations</Link>
+                <Link to="/booking" onClick={closeMenu}>
+                  Reservations
+                </Link>
               </li>
               <li>
-                <Link to="/order-online">Order Online</Link>
+                <Link to="/order-online" onClick={closeMenu}>
+                  Order
+                </Link>
               </li>
-              <li>
-                <Link to="/login">Login</Link>
+              <li className="login-item">
+                <Link
+                  to="/login"
+                  onClick={closeMenu}
+                  className="btn btn-primary login-link"
+                >
+                  Login
+                </Link>
               </li>
             </ul>
           </nav>
